@@ -17,8 +17,8 @@ namespace Snake_Bachelor.Game
 
         public Snake()
         {
-            x = 30;
-            y = 15;
+            x = Width/2;
+            y = Height/2;
             snakeParts = new List<Position>();
             snakeParts.Add(new Position(x, y));
         }
