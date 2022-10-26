@@ -10,7 +10,7 @@ namespace Snake_Bachelor.Game
     {
         public int x { get; set; }
         public int y { get; set; }
-        public Position(int x, int y)
+        public Position(int x, int y) //Tout est dans le nom :)
         {
             this.x = x;
             this.y = y;

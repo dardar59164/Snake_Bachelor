@@ -16,18 +16,18 @@ namespace Snake_Bachelor.Game
             foodPos.y = rand.Next(1,Height);
         }
 
-        public override void Draw()
+        public override void Draw() //Override Board.Draw() pour afficher la nourriture
         {
             Console.SetCursorPosition(foodPos.x, foodPos.y);
             Console.Write('*');
         }
 
-        public Position locateFood()
+        public Position locateFood() //Renvoie la position de la nourriture
         {
             return foodPos;
         }
 
-        public void newFoodLocation()
+        public void newFoodLocation() //Réattribue des coordonnées random au food consommé
         {
             foodPos.x = rand.Next(1, Width);
             foodPos.y = rand.Next(1, Height);

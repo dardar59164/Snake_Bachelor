@@ -14,11 +14,12 @@ namespace Snake_Bachelor.Game
         public Board()
         {
             Console.CursorVisible = false;
+            //↓↓ Ajuste la taille de la console ↓↓
             Width = 60;
             Height = 30;
         }
 
-        public virtual void Draw()
+        public virtual void Draw() //Crée les murs de la map
         {
             Console.Clear();
             for (int i = 0; i < Width; i++)

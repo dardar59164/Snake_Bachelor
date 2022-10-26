@@ -17,17 +17,19 @@ namespace Snake_Bachelor.Game
 
         public Snake()
         {
+            //↓↓ Position le snake au centre de la console ↓↓
             x = Width/2;
             y = Height/2;
+            //↓↓ Crée une liste des différentes positions du snake ↓↓
             snakeParts = new List<Position>();
             snakeParts.Add(new Position(x, y));
         }
 
         public override void Draw()
         {
-            foreach(Position pos in snakeParts)
+            foreach(Position pos in snakeParts) //Récupère chaque position de mon snake
             {
-                Console.SetCursorPosition(pos.x, pos.y);
+                Console.SetCursorPosition(pos.x, pos.y); //place les parties
                 Console.Write("O");
             }
         }
@@ -76,7 +78,9 @@ namespace Snake_Bachelor.Game
 
         public void Move()
         {
+            //↓↓ Renvoie la direction du joueur ↓↓
             Direction();
+            //↓↓ Check si le déplacement est possible, sinon bloque ↓↓
             if (direction == 'u')
             {
                 if (y - 1 > 0) y--;
@@ -93,18 +97,18 @@ namespace Snake_Bachelor.Game
             {
                 if (x - 1 > 0) x--;
             }
-            snakeParts.Add(new Position(x, y));
-            snakeParts.RemoveAt(0);
-            Thread.Sleep(100);
+            snakeParts.Add(new Position(x, y)); //avance le serpent
+            snakeParts.RemoveAt(0); //supprime l'ancien emplacement
+            Thread.Sleep(50);
         }
 
         public void Grow(Food food,Position foodPosition)
         {
             Position snakeHead = snakeParts[snakeParts.Count - 1]; //Snake Head Position
-            if (snakeHead.x == foodPosition.x && snakeHead.y == foodPosition.y)
+            if (snakeHead.x == foodPosition.x && snakeHead.y == foodPosition.y) //check les coordonnées de la nourriture et de la tête du snake
             {
                 snakeParts.Add(new Position(x, y));
-                food.newFoodLocation();
+                food.newFoodLocation(); //téléporte la nourriture à un autre endroit
             }
         }
     }
