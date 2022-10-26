@@ -8,10 +8,12 @@ namespace Snake_Bachelor
         {
             bool end = false;
             Board gameboard = new Board();
+            Snake snake = new Snake();
 
             while (!end)
             {
                 gameboard.drawBoard();
+                snake.drawSnake();
                 Console.Read();
             }
         }

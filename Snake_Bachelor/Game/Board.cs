@@ -13,6 +13,7 @@ namespace Snake_Bachelor.Game
 
         public Board()
         {
+            Console.CursorVisible = false;
             Width = 60;
             Height = 30;
         }
