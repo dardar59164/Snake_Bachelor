@@ -9,11 +9,13 @@ namespace Snake_Bachelor
             bool end = false;
             Board gameboard = new Board();
             Snake snake = new Snake();
+            Food food = new Food();
 
             while (!end)
             {
                 gameboard.drawBoard();
                 snake.Input();
+                food.drawFood();
                 snake.drawSnake();
                 snake.move();
             }

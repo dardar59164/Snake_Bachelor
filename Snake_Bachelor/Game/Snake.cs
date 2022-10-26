@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Snake_Bachelor.Game
 {
-    public class Snake
+    public class Snake : Board
     {
         ConsoleKeyInfo keyInfo = new ConsoleKeyInfo();
         char key = 'z';
@@ -83,11 +83,11 @@ namespace Snake_Bachelor.Game
             }
             if (direction == 'd')
             {
-                if (y + 1 < 30 ) y++;
+                if (y + 1 < Height ) y++;
             }
             if (direction == 'r')
             {
-                if (x + 1 < 60) x++;
+                if (x + 1 < Width) x++;
             }
             if (direction == 'l')
             {
@@ -95,6 +95,11 @@ namespace Snake_Bachelor.Game
             }
             snakeParts.Add(new Position(x, y));
             Thread.Sleep(100);
+        }
+
+        public void Grow(Position food)
+        {
+
         }
     }
 }
