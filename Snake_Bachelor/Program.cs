@@ -13,8 +13,9 @@ namespace Snake_Bachelor
             while (!end)
             {
                 gameboard.drawBoard();
+                snake.Input();
                 snake.drawSnake();
-                Console.Read();
+                snake.move();
             }
         }
     }
