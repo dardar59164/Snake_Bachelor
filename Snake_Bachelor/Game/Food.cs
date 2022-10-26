@@ -14,7 +14,6 @@ namespace Snake_Bachelor.Game
         {
             foodPos.x = rand.Next(1,Width);
             foodPos.y = rand.Next(1,Height);
-            foodPos = new Position(foodPos.x,foodPos.y);
         }
 
         public void drawFood()
@@ -26,6 +25,12 @@ namespace Snake_Bachelor.Game
         public Position locateFood()
         {
             return foodPos;
+        }
+
+        public void newFoodLocation()
+        {
+            foodPos.x = rand.Next(1, Width);
+            foodPos.y = rand.Next(1, Height);
         }
     }
 }

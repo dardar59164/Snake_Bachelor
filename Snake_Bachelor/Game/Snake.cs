@@ -94,12 +94,18 @@ namespace Snake_Bachelor.Game
                 if (x - 1 > 0) x--;
             }
             snakeParts.Add(new Position(x, y));
+            snakeParts.RemoveAt(0);
             Thread.Sleep(100);
         }
 
-        public void Grow(Position food)
+        public void Grow(Food food,Position foodPosition)
         {
-
+            Position snakeHead = snakeParts[snakeParts.Count - 1]; //Snake Head Position
+            if (snakeHead.x == foodPosition.x && snakeHead.y == foodPosition.y)
+            {
+                snakeParts.Add(new Position(x, y));
+                food.newFoodLocation();
+            }
         }
     }
 }

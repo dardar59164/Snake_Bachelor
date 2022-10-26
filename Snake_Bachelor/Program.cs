@@ -18,6 +18,7 @@ namespace Snake_Bachelor
                 food.drawFood();
                 snake.drawSnake();
                 snake.move();
+                snake.Grow(food,food.locateFood());
             }
         }
     }
