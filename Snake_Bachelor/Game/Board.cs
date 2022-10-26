@@ -13,32 +13,32 @@ namespace Snake_Bachelor.Game
 
         public Board()
         {
-            Width = 100;
-            Height = 100;
+            Width = 60;
+            Height = 30;
         }
 
-        public void DrawBoard()
+        public void drawBoard()
         {
             Console.Clear();
             for (int i = 0; i < Width; i++)
             {
                 Console.SetCursorPosition(i, 0);
-                Console.Write('#');
+                Console.Write("#");
             }
             for (int i = 0; i < Width; i++)
             {
                 Console.SetCursorPosition(i, Height);
-                Console.Write('#');
+                Console.Write("#");
             }
             for (int i = 0; i < Height; i++)
             {
                 Console.SetCursorPosition(0, i);
-                Console.Write('#');
+                Console.Write("#");
             }
             for (int i = 0; i < Height; i++)
             {
                 Console.SetCursorPosition(Width, i);
-                Console.Write('#');
+                Console.Write("#");
             }
         }
     }
