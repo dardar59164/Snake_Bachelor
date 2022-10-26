@@ -79,22 +79,21 @@ namespace Snake_Bachelor.Game
             Direction();
             if (direction == 'u')
             {
-                y--;
+                if (y - 1 > 0) y--;
             }
             if (direction == 'd')
             {
-                y++;
+                if (y + 1 < 30 ) y++;
             }
             if (direction == 'r')
             {
-                x++;
+                if (x + 1 < 60) x++;
             }
             if (direction == 'l')
             {
-                x--;
+                if (x - 1 > 0) x--;
             }
             snakeParts.Add(new Position(x, y));
-            snakeParts.RemoveAt(0);
             Thread.Sleep(100);
         }
     }
