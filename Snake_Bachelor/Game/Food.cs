@@ -16,7 +16,7 @@ namespace Snake_Bachelor.Game
             foodPos.y = rand.Next(1,Height);
         }
 
-        public void drawFood()
+        public override void Draw()
         {
             Console.SetCursorPosition(foodPos.x, foodPos.y);
             Console.Write('*');

@@ -13,11 +13,11 @@ namespace Snake_Bachelor
 
             while (!end)
             {
-                gameboard.drawBoard();
+                gameboard.Draw();
                 snake.Input();
-                food.drawFood();
-                snake.drawSnake();
-                snake.move();
+                food.Draw();
+                snake.Draw();
+                snake.Move();
                 snake.Grow(food,food.locateFood());
             }
         }

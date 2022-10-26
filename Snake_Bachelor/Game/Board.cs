@@ -18,7 +18,7 @@ namespace Snake_Bachelor.Game
             Height = 30;
         }
 
-        public void drawBoard()
+        public virtual void Draw()
         {
             Console.Clear();
             for (int i = 0; i < Width; i++)

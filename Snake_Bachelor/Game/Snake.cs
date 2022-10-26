@@ -23,7 +23,7 @@ namespace Snake_Bachelor.Game
             snakeParts.Add(new Position(x, y));
         }
 
-        public void drawSnake()
+        public override void Draw()
         {
             foreach(Position pos in snakeParts)
             {
@@ -74,7 +74,7 @@ namespace Snake_Bachelor.Game
             }
         }
 
-        public void move()
+        public void Move()
         {
             Direction();
             if (direction == 'u')
